@@ -1,4 +1,5 @@
-import { useDebugValue, useState } from "react";
+import { useDebugValue, useState,useEffect} from "react";
+import Example from "./Example";
 
 function App() {
   const [vize1, setVize1] = useState("");
@@ -35,7 +36,16 @@ function App() {
       </div>
 
      <p>Ortalama:{ortalama} </p>
+
+
+     <hr></hr>
+
+     <Example />
+
+
+
     </div>
+
   );
 }
 
