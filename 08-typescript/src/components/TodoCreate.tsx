@@ -11,7 +11,7 @@ const TodoCreate = () => {
   const [newTodo,setNewTodo]=useState("");
 
   const handleCreateTodo=()=>{
-    if(newTodo.trim().length==0){
+    if(newTodo.trim().length===0){
       alert("Todo Giriniz")
       return;
     }
