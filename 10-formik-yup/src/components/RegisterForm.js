@@ -1,20 +1,32 @@
 import React from "react";
 import { useFormik } from "formik";
+import { registerFormSchemas } from "../schemas/RegisterFormSchemas";
 
 const RegisterForm = () => {
-  const { values, errors, handleChange, handleSubmit } = useFormik({
+
+    const submit=(values,action)=>{
+        setTimeout(()=>{
+            action.resetForm();
+        },2000)
+    }
+
+    
+
+  const { values, errors,touched,handleBlur, handleChange, handleSubmit } = useFormik({
     initialValues: {
       email: "",
-      age:"",
+      age:0,
       password:"",
       confirmPassword:"",
-      term:"",
+      term:false,
     },
+    validationSchema:registerFormSchemas,
+    onSubmit: submit
   });
   
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="inputDiv">
           <label>Email </label>
           <input
@@ -23,7 +35,10 @@ const RegisterForm = () => {
             placeholder="Email giriniz"
             value={values.email}
             onChange={handleChange}
+            onBlur={handleBlur}
+            
          />
+         {errors.email && touched.email && <p className="input-error">{errors.email}</p>}
         </div>
 
          <div className="inputDiv">
@@ -34,7 +49,9 @@ const RegisterForm = () => {
             placeholder="Yaşınızı giriniz"
             value={values.age}
             onChange={handleChange}
+             onBlur={handleBlur}
           />
+          {errors.age && touched.age && <p className="input-error">{errors.age}</p>}
         </div>
 
          <div className="inputDiv">
@@ -45,7 +62,9 @@ const RegisterForm = () => {
             placeholder="Şifrenizi giriniz"
             value={values.password}
             onChange={handleChange}
+             onBlur={handleBlur}
           />
+          {errors.password && touched.password && <p className="input-error">{errors.password}</p>}
         </div>
 
         <div className="inputDiv">
@@ -56,7 +75,10 @@ const RegisterForm = () => {
             placeholder="Şifrenizi tekrar giriniz"
             value={values.confirmPassword}
             onChange={handleChange}
+             onBlur={handleBlur}
           />
+            {errors.confirmPassword && touched.confirmPassword && <p className="input-error">{errors.confirmPassword}</p>}
+
         </div>
 
         <div className="inputDiv ">
@@ -66,14 +88,18 @@ const RegisterForm = () => {
             style={{width:'20px',height:'12px'}}
             type="checkbox"
             id="term"
-            value={values.term}
+            checked={values.term}
             onChange={handleChange}
+             onBlur={handleBlur}
             />
+
             <label>Kullanıcı Sözleşmesini kabul ediyorum </label>
           </div>
+            {errors.term && touched.term && <p className="input-error">{errors.term}</p>}
+
         </div>
 
-        <button className="save-buton">Kaydet</button>
+        <button type="submit" className="save-buton">Kaydet</button>
 
 
 
