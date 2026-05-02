@@ -8,6 +8,7 @@ import MUIStack from "./components/MUIStack";
 import MUIGrid from "./components/MUIGrid";
 import MUICard from "./components/MUICard";
 import MUIAccordion from "./components/MUIAccordion";
+import MUIAppBar from "./components/MUIAppBar";
 
 
 
@@ -25,9 +26,11 @@ function App() {
       <MUIStack />
       <MUIGrid />
       <MUICard />
+      <MUIAccordion /> 
 
         */}
-      <MUIAccordion />  
+        <MUIAppBar />
+       
     </div>
   );
 }
