@@ -6,6 +6,7 @@ import MUIAutoCompleted from "./components/MUIAutoCompleted";
 import MUIBox from "./components/MUIBox";
 import MUIStack from "./components/MUIStack";
 import MUIGrid from "./components/MUIGrid";
+import MUICard from "./components/MUICard";
 
 
 
@@ -21,8 +22,9 @@ function App() {
       <MUIAutoCompleted/>
       <MUIBox />
       <MUIStack />
+      <MUIGrid />
        */}
-       <MUIGrid />
+       <MUICard />
     </div>
   );
 }
