@@ -5,6 +5,7 @@ import MUICheckBox from "./components/MUICheckBox";
 import MUIAutoCompleted from "./components/MUIAutoCompleted";
 import MUIBox from "./components/MUIBox";
 import MUIStack from "./components/MUIStack";
+import MUIGrid from "./components/MUIGrid";
 
 
 
@@ -19,8 +20,9 @@ function App() {
       <MUICheckBox />
       <MUIAutoCompleted/>
       <MUIBox />
-      */}
       <MUIStack />
+       */}
+       <MUIGrid />
     </div>
   );
 }
