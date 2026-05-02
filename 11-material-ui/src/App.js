@@ -1,9 +1,11 @@
-import MUIButton from "./components/MUIButton"
+import MUIButton from "./components/MUIButton";
+import MUITextField from "./components/MUITextField"
 
 function App() {
   return (
     <div >
       <MUIButton />
+      <MUITextField />
     </div>
   );
 }
