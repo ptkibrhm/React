@@ -12,6 +12,7 @@ import MUIAppBar from "./components/MUIAppBar";
 import MUIImageList from "./components/MUIImageList";
 import MUIDrawer from "./components/MUIDrawer";
 import MUIBadge from "./components/MUIBadge";
+import MUIAvatar from "./components/MUIAvatar";
 
 
 
@@ -35,10 +36,11 @@ function App() {
       <MUIAppBar />
       <MUIImageList /> 
       <MUIDrawer />
+      <MUIBadge />
 
         */}
-      
-    <MUIBadge />
+      <MUIAvatar />
+   
        
     </div>
   );
