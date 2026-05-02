@@ -1,11 +1,13 @@
 import MUIButton from "./components/MUIButton";
 import MUITextField from "./components/MUITextField"
+import MUISelect from "./components/MUISelect"
 
 function App() {
   return (
     <div >
-      <MUIButton />
-      <MUITextField />
+      {/* <MUIButton />
+      <MUITextField /> */}
+      <MUISelect />
     </div>
   );
 }
